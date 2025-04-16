@@ -1,0 +1,61 @@
+{
+  "plug-in-batch-export-images": [
+    {
+      "settings": [
+        {
+          "settings": [
+            {
+              "name": "file_extension",
+              "default_value": "png",
+              "display_name": "File extension",
+              "adjust_value": true,
+              "auto_update_gui_to_setting": false,
+              "gui_type": null,
+              "value": "tif",
+              "type": "file_extension"
+            },
+            {
+              "name": "output_directory",
+              "default_value": "file:///C:/Users/Public/Documents",
+              "action": 2,
+              "display_name": "Output folder",
+              "value": "file:///C:/Users/Public/Documents",
+              "type": "file"
+            },
+            {
+              "name": "name_pattern",
+              "default_value": "[image name]",
+              "display_name": "Image filename pattern",
+              "description": "Image filename pattern (empty string = image name)",
+              "gui_type": null,
+              "value": "image[001]",
+              "type": "name_pattern"
+            }
+          ],
+          "name": "main"
+        },
+        {
+          "settings": [
+            {
+              "name": "overwrite_mode",
+              "default_value": "rename_new",
+              "display_name": "How to handle conflicting files (non-interactive run mode only)",
+              "gui_type": null,
+              "value": "rename_new",
+              "type": "choice"
+            },
+            {
+              "name": "export_mode",
+              "default_value": "each_item",
+              "display_name": "Perform export:",
+              "pdb_type": null,
+              "value": "each_item",
+              "type": "choice"
+            }
+          ],
+          "name": "export"
+        }
+      ]
+    }
+  ]
+}
