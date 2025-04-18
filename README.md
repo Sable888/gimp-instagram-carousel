@@ -53,6 +53,30 @@ To use:
 
 ---
 
+### ⚠️ Export Bug Warning – 32-bit Float Issues
+
+> 🐛 **Known Issue**: Exporting images in **32-bit floating point** precision mode causes **black or white image outputs** when using Batcher, especially if "Save Layers" is enabled.
+
+✅ **Solution**:  
+Before slicing and exporting:
+- Convert your image to **16-bit Integer (Gamma-corrected)** via:
+  ```
+  Image > Precision > 16-bit Integer (non-linear)
+  ```
+- Then slice and export normally.
+
+🔎 **Why this matters**:  
+This fixes the export glitch, but means you are no longer working in true HDR (32-bit float). The result is **visually identical for Instagram**, but technically not full HDR.
+
+---
+
 ## 🛠️ Installation
 
-1. Extract each `.zip` folder into your GIMP plugins directory:
+1. Extract each `.zip` folder into your GIMP plug-ins directory:
+   - **Windows:** `%appdata%\\GIMP\\3.0\\plug-ins\\`
+   - **Mac:** `~/Library/Application Support/GIMP/3.0/plug-ins/`
+   - **Linux:** `~/.config/GIMP/3.0/plug-ins/`
+
+2. Ensure each plugin folder contains its `.py` file directly inside.
+3. Restart GIMP.
+4. Find the tools under the **Guides** menu.
