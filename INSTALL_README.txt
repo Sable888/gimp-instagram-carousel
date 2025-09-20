@@ -83,6 +83,7 @@ If the plugins don’t show up:
 - ✅ Ensure each `.py` file is **inside the folder it came in**, not dragged out
 - Restart GIMP after copying the files
 - Windows handles permissions automatically for `.py` files
+- Run `chmod +x` command on the `.py` files to make them executable on unix systems
 
 ---
 
