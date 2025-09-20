@@ -80,3 +80,13 @@ This fixes the export glitch, but means you are no longer working in true HDR (3
 2. Ensure each plugin folder contains its `.py` file directly inside.
 3. Restart GIMP.
 4. Find the tools under the **Guides** menu.
+
+### Troubleshooting
+
+On unix systems, you might need to add executable permission to each `.py` file by the `chmod +x` command:
+```bash
+chmod +x batcher/batcher.py 
+chmod +x instagram_add_19_guides/instagram_add_19_guides.py
+chmod +x Scale_and_Center_Layers/Scale_and_Center_Layers.py
+chmod +x slice_by_guides/slice_by_guides.py 
+```
